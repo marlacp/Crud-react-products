@@ -41,10 +41,12 @@ export const ProductForm = (props) => {
         } else{
             getProductkById(props.currentId);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[props.currentId]);
    
     return (
         <form  className="card card-body" onSubmit={handleSubmit}>
+          <h1>Please insert a new product</h1>
             <h4>Name</h4>
             <div className="form-group input-group">
                 <div className="input-group-text bg-light">

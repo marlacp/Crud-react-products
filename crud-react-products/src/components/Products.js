@@ -55,19 +55,24 @@ const Products = () => {
 
     return (
         <>
-            <div className="col-md-8 p-2">
+            <div className="col-md-12 p-2">
                 <ProductForm {...{addOrEditProducts, currentId, products}} />
             </div>
         
         {/* ********************************** */}
 
-            <div className="col-md-8 p-2">
+            <div className="col-md-12 p-2">
                 {products.map((product) =>(
                     <div className="card mb-1" key={product.id}>
+                  
                         <div className="card-body">
+                            <h3>Product name:</h3>
                             <h4>{product.name}</h4>
+                            <h3>Producto Description:</h3>
                             <p>{product.description}</p>
+                            <h3>Stock: </h3>
                             <h4>{product.stock}</h4>
+                            <h3>Price: </h3>
                             <h4>{product.price}</h4>
                             <div className="d-flex justify-content-between">
                                 <button type="button" className="btn btn-danger"
