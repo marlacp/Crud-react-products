@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+### Create-react-product
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto permite al usuario, crear credenciales, y loguearse, para insertar nuevos productos, editar o eliminarlos. Fue desarrollado con el framework React Js, y cuenta con un back-end en firebase.
 
-## Available Scripts
+###Instalación 
 
-In the project directory, you can run:
+Descargas el proyecto, y en tu consola corres el comando:
+`$ npm install `
 
-### `npm start`
+Una vez ejecutado, instalara todas las dependencias, y corres el proyecto con:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`$ npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Una vez ejecutado te aparecera una interfaz como esta:
 
-### `npm test`
+![](https://i.postimg.cc/MH4Z6Hxx/Sign-up.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ahora para ingresar debemos crear nuestra credencial, para ello, ingresamos un correo y una contraseña, y le damos clic al botón "Sign up" de esta manera:
 
-### `npm run build`
+![](https://i.postimg.cc/L5sBdC4w/creacion-de-credencial.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Automáticamente ingresa al siguiente formulario.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](https://i.postimg.cc/90S96cnw/Formulario.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ahora ingresamos un nuevo producto, llenando el formulario y dando clic en el botón save, de la siguiente manera:
 
-### `npm run eject`
+![](https://i.postimg.cc/9z5MP0kb/product-new.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Como resultado, en la parte inferior del formulario, obtenemos un nuevo producto:
+![](https://i.postimg.cc/nr77fybd/resultado-new.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contamos con la opción de editar el producto que ingresamos,  realizando click en el botón edit. Aparece la información del producto sobre el formulario, realizamos el ajuste en este caso cambiamos su stock a 20, y damos clic en el botób update, de la siguiente manera:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![](https://i.postimg.cc/667FGYfY/edit-form.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Al aplicar los cambios, lo vemos reflejado instantaneamente. 
+![](https://i.postimg.cc/28DT8wcq/resultado-edit.png)
 
-## Learn More
+Si deseas, puedes eliminar productos, con el botón "Delete", y finalmente puedes salir de la interfaz con el botón "logout" superior derecha. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+En el repositorio encontrarás el código del proyecto, el desarrollo del proyecto empieza por el archivo App.js, tiene el código de login para conectarse con firebase, y a su vez contiene los componentes principales, el componente “login” que es el desarrollo de ingreso y creación de credenciales y el componente “hero” que representa la sección del formulario de productos. Los componentes están ubicados en la carpeta “components”. El componente “hero”, tiene el diseño del nav, el botón “logout”, y llama al componente del formulario denominado “Products”, aquí tenemos el desarrollo del formulario y a su vez contiene el componente, ProductoForm, donde visualizamos los productos creados.
